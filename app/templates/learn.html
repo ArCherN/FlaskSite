@@ -1,0 +1,22 @@
+<!-- learn.html-->
+
+{% extends "base.html" %}
+{% block title %}Learning - Мега-Учебник Flask{% endblock %}
+{%  block navbar %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="jumbotron">
+  <p class="lead">Неактивные номера на панелях расширения:</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="#" role="button">Получить список</a>
+</div>
+    <div class="jumbotron">
+        <p class = "h3">Неактивные номера на панелях расширения:</p>
+        <hr class="my-4">
+        {% for button in buttons %}
+        <p class="lead">{{ button }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

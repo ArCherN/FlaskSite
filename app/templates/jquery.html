@@ -1,0 +1,19 @@
+<!-- jquery.html-->
+
+<!-- <h1>{{  url_for('static', filename='js/jquery2.js') }}</h1> -->
+<!-- <script src="{{  url_for('static', filename='js/jquery2.js') }}" type="text/javascript"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="/app/static/js/jquery2.js" type="text/javascript"></script> -->
+<script type="text/javascript">
+  $(function() {
+    $('a#calculate').bind('click', function() {
+      $.getJSON('/_add_numbers', {
+        a: $('input[name="a"]').val(),
+        b: $('input[name="b"]').val()
+      }, function(data) {
+        $("#result").text(data.result);
+      });
+      return false;
+    });
+  });
+</script>
