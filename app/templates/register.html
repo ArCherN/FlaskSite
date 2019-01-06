@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block body %}
     <h1>Register</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
+            {{ form.username(size=32) }} @dtek.com<br>
             {% for error in form.username.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}

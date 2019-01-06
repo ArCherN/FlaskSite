@@ -4,7 +4,7 @@
 {% block title %}Home{% endblock %}
 {% block body %}
 <div class="jumbotron">
-  <h1>Hello, {{ current_user.username }}! </h1>
+  <h1>Hello, {{ current_user.first_name }}! </h1>
   <p class="lead">Let's config smthig?!</p>
 </div>
 {% for post in posts %}
