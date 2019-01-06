@@ -9,5 +9,6 @@ app = Flask(__name__, instance_relative_config=True)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+1+1
 
 from app import routes, models
