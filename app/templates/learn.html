@@ -15,8 +15,15 @@
     <div class="jumbotron">
         <p class = "h3">Неактивные номера на панелях расширения:</p>
         <hr class="my-4">
-        {% for button in buttons %}
+        <table>
+            {% for button in buttons %}
+            <tr valign="top">
+                <td><img src="{{ current_user.avatar(36) }}"></td>
+                <td>{{ button}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+
         <p class="lead">{{ button }}</p>
-        {% endfor %}
     </div>
 {% endblock %}
